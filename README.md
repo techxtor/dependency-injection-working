@@ -4,17 +4,17 @@ Dependency Injection
 ---
 ### Introduction:
 * Dependency Injection is a fundamental aspect of the Spring framework, through which the Spring container “injects” objects into other objects or “dependencies”.
-[Details on IoC and Dependency Injection](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)
+* [Details on IoC and Dependency Injection](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)
 
 ### Working
-* Conventional way of creating instance (_as below_) can be replaced with Dependency Injection.
-`
-CatService catService = new CatService();
-catService.getCatCount();
-`
-Different ways of Implementing:
- - XML Configuration
- - Annotation Based Configuration
+ - Conventional way of creating instance (_as below_) can be replaced with Dependency Injection.
+---
+    CatService catService = new CatService();
+    catService.getCatCount();
+---
+- Different ways of Implementing:
+  - XML Configuration
+  - Annotation Based Configuration
  
 #### XML Configuration
  - [Refer this Repo](https://github.com/techxtor/spring-core-ioc)
@@ -109,22 +109,7 @@ Different ways of Implementing:
         - Inject them wherever needed
     - @Controller, @Service and @Repository. They all provide the same function as @Component.
  - @ComponentScan:
-    - Spring uses the @ComponentScan annotation to  search and gather all @Component in that package into its ApplicationContext
-
-### SAMPLE DEBUG OUTPUT:
-`
-22:28:02.082 [main] DEBUG org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@351d00c0
-22:28:02.105 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
-22:28:02.347 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
-22:28:02.350 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
-22:28:02.352 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
-22:28:02.354 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
-22:28:02.367 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'beanConfig'
-22:28:02.377 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataSource'
-22:28:02.399 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'catService'
-22:28:02.414 [main] DEBUG org.springframework.core.env.PropertySourcesPropertyResolver - Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
-Number of Cats: 3
-`
+    - Spring uses the @ComponentScan annotation to  search and gather all @Component in that package into its ApplicationContext`
 
 ### @Component vs @Bean
 
