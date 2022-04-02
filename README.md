@@ -1,10 +1,11 @@
 *dependency-injection-working*
 ---
-Dependency Injection
+Dependency Injection Working
 ---
 ### Introduction:
 * Dependency Injection is a fundamental aspect of the Spring framework, through which the Spring container “injects” objects into other objects or “dependencies”.
 * [Details on IoC and Dependency Injection](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)
+* [Details on ApplicationContext](https://www.baeldung.com/spring-component-annotation#spring-applicationcontext)
 
 ### Working
  - Conventional way of creating instance (_as below_) can be replaced with Dependency Injection.
